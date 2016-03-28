@@ -133,18 +133,16 @@ var app =
         },
         loginSuccess: function (x)
         {
-            FB.api('/me', function (response)
-            {
-                appViewModel.username(response.name);
-                window.sessionStorage.setItem("username", appViewModel.username());
 
-                appViewModel.place("South India");
-                appViewModel.placeLink("https://en.wikipedia.org/wiki/South_India");
-                appViewModel.page_recommendations_home_vsd = new Date("Jan 1, 2016");
-                appViewModel.page_recommendations_home_ved = new Date("Jan 3, 2016");
+            appViewModel.username(response.name);
+            window.sessionStorage.setItem("username", appViewModel.username());
 
-                app.gotoHome();
-            });
+            appViewModel.place("South India");
+            appViewModel.placeLink("https://en.wikipedia.org/wiki/South_India");
+            appViewModel.page_recommendations_home_vsd = new Date("Jan 1, 2016");
+            appViewModel.page_recommendations_home_ved = new Date("Jan 3, 2016");
+
+            app.gotoHome();
         },
         loginFailure: function (x)
         {
@@ -152,12 +150,9 @@ var app =
         },
         logout: function ()
         {
-            FB.logout(function (response)
-            {
-                appViewModel.username(null);
-                window.sessionStorage.setItem("username", null);
-                $.mobile.changePage("#page_login", { transition: "slideup", changeHash: false });
-            });
+            appViewModel.username(null);
+            window.sessionStorage.setItem("username", null);
+            $.mobile.changePage("#page_login", { transition: "slideup", changeHash: false });
         }
     };
 
