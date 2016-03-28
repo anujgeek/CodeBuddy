@@ -19,20 +19,6 @@ var app =
         onDeviceReady: function ()
         {
             isDeviceReady = true;
-            $(document).on("pagecontainerchange", function (event, ui)
-            {
-                if (ui.toPage[0].id == "page_recommendations_home")
-                {
-                    $("#page_recommendations_home_vsd").datebox('setTheDate', appViewModel.page_recommendations_home_vsd).trigger('datebox', { 'method': 'doset' });
-                    $("#page_recommendations_home_ved").datebox('setTheDate', appViewModel.page_recommendations_home_ved).trigger('datebox', { 'method': 'doset' });
-                }
-                if (ui.toPage[0].id == "page_recommendations_details")
-                {
-                    $("#page_recommendations_details_tab1").trigger("click");
-                }
-            });
-
-            appViewModel.username(window.sessionStorage.getItem("username"));
 
             app.test();
         },
