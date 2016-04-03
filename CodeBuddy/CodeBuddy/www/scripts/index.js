@@ -36,7 +36,7 @@ var app =
         },
         test: function ()
         {
-
+            app.gotoHome();
         },
         openPanel: function ()
         {
@@ -49,96 +49,17 @@ var app =
                 $("#leftpanel2").panel("open");
             }
         },
-        gotoNotification: function ()
-        {
-            //navigator.notification.alert("Travel Buddy - It is time for your next vacation", app.gotoNotificationDismissed, "Travel Buddy");
-            app.gotoNotificationDismissed();
-        },
-        gotoNotificationDismissed: function ()
-        {
-            app.testLoginInitialize();
-            app.gotoRecommendationsHome();
-        },
-        gotoLogin: function ()
-        {
-            $.mobile.changePage("#page_login", { transition: "slideup", changeHash: false });
-        },
         gotoHome: function ()
         {
             $.mobile.changePage("#page_home", { transition: "slidedown", changeHash: false });
         },
-        gotoRecommendationsHome: function ()
+        gotoCreate: function ()
         {
-            $.mobile.changePage("#page_recommendations_home", { transition: "slidefade", changeHash: false });
+            $.mobile.changePage("#page_create", { transition: "slidefade", changeHash: false });
         },
-        gotoRecommendationsHomeCustom: function ()
+        gotoLoad: function ()
         {
-            $.mobile.changePage("#page_recommendations_home_custom", { transition: "slidefade", changeHash: false });
-        },
-        gotoRecommendationsDetails: function ()
-        {
-            $.mobile.changePage("#page_recommendations_details", { transition: "slidefade", changeHash: false });
-        },
-        gotoPrivacyPolicy: function ()
-        {
-            $.mobile.changePage("#page_privacy_policy", { transition: "slidefade", changeHash: false });
-        },
-        gotoSettings: function ()
-        {
-            $.mobile.changePage("#page_settings", { transition: "slidefade", changeHash: false });
-        },
-        gotoRecommendationsTravel: function ()
-        {
-            $.mobile.changePage("#page_recommendations_travel", { transition: "slidefade", changeHash: false });
-        },
-        gotoRecommendationsFood: function ()
-        {
-            $.mobile.changePage("#page_recommendations_food", { transition: "slidefade", changeHash: false });
-        },
-        testLoginInitialize: function ()
-        {
-            appViewModel.username("TestUser");
-            window.sessionStorage.setItem("username", appViewModel.username());
-
-            appViewModel.place("South India");
-            appViewModel.placeLink("https://en.wikipedia.org/wiki/South_India");
-            appViewModel.page_recommendations_home_vsd = new Date("Jan 1, 2016");
-            appViewModel.page_recommendations_home_ved = new Date("Jan 3, 2016");
-        },
-        testLoginSuccess: function ()
-        {
-            app.testLoginInitialize();
-
-            app.gotoHome();
-        },
-        testLogout: function ()
-        {
-            appViewModel.username(null);
-            window.sessionStorage.setItem("username", null);
-            $.mobile.changePage("#page_login", { transition: "slideup", changeHash: false });
-        },
-        loginSuccess: function (x)
-        {
-
-            appViewModel.username(response.name);
-            window.sessionStorage.setItem("username", appViewModel.username());
-
-            appViewModel.place("South India");
-            appViewModel.placeLink("https://en.wikipedia.org/wiki/South_India");
-            appViewModel.page_recommendations_home_vsd = new Date("Jan 1, 2016");
-            appViewModel.page_recommendations_home_ved = new Date("Jan 3, 2016");
-
-            app.gotoHome();
-        },
-        loginFailure: function (x)
-        {
-            navigator.notification.alert("Please enter valid credentials!", null, "Login Failure");
-        },
-        logout: function ()
-        {
-            appViewModel.username(null);
-            window.sessionStorage.setItem("username", null);
-            $.mobile.changePage("#page_login", { transition: "slideup", changeHash: false });
+            $.mobile.changePage("#page_load", { transition: "slidefade", changeHash: false });
         }
     };
 
