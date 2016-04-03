@@ -36,6 +36,8 @@ var app =
         },
         test: function ()
         {
+            appViewModel.username("User");
+
             app.gotoHome();
         },
         openPanel: function ()
