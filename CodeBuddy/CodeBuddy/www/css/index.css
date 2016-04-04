@@ -248,3 +248,21 @@ select
 {
     color: black !important;
 }
+
+#cartoontextbox
+{
+    min-width: 295px;
+    font-family: 'Comic Sans MS';
+    font-size: large;
+    background-image: url('../images/dexter.png');
+    background-position: left top;
+    background-position-x: 10px;
+    background-position-y: 10px;
+    background-repeat: no-repeat;
+    background-size: 80px;
+    border-radius: 25px;
+    border: 5px solid #73AD21;
+    padding: 20px;
+    width: 200px;
+    height: 160px;
+}

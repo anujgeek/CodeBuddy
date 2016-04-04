@@ -22,7 +22,54 @@ var app =
 
             $('#selectaction').change(function ()
             {
-
+                switch ($("#selectaction").val())
+                {
+                    case "0":
+                        {
+                            $('#cartoontext').text("Select an action");
+                            break;
+                        }
+                    case "1":
+                        {
+                            $('#cartoontext').text("Variables work like containers to hold numbers, phrases, or other important stuff.");
+                            break;
+                        }
+                    case "2":
+                        {
+                            $('#cartoontext').text("Perform different actions based on a logical condition.");
+                            break;
+                        }
+                    case "3":
+                        {
+                            $('#cartoontext').text("Repeat a sequence of actions until a certain condition is reached.");
+                            break;
+                        }
+                    case "4":
+                        {
+                            $('#cartoontext').text("Display a message.");
+                            break;
+                        }
+                    case "5":
+                        {
+                            $('#cartoontext').text("You know the basic math, right?");
+                            break;
+                        }
+                    case "6":
+                        {
+                            $('#cartoontext').text("You know the basic math, right?");
+                            break;
+                        }
+                    case "7":
+                        {
+                            $('#cartoontext').text("You know the basic math, right?");
+                            break;
+                        }
+                    case "8":
+                        {
+                            $('#cartoontext').text("You know the basic math, right?");
+                            break;
+                        }
+                }
             });
 
             app.test();
