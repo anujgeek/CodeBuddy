@@ -243,3 +243,8 @@ h5.lv
 {
     padding-bottom: 3.5px;
 }
+
+select
+{
+    color: black !important;
+}

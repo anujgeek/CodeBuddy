@@ -20,6 +20,11 @@ var app =
         {
             isDeviceReady = true;
 
+            $('#selectaction').change(function ()
+            {
+
+            });
+
             app.test();
         },
         uiinit: function ()
@@ -62,6 +67,19 @@ var app =
         gotoLoad: function ()
         {
             $.mobile.changePage("#page_load", { transition: "slidefade", changeHash: false });
+        },
+        gotoShow: function ()
+        {
+            $.mobile.changePage("#page_show", { transition: "slidefade", changeHash: false });
+        },
+        gotoCode: function ()
+        {
+            $.mobile.changePage("#page_code", { transition: "slidefade", changeHash: false });
+        },
+        AddAction: function ()
+        {
+            $("#selectaction").val(0).change();
+            $("#actiontext").val("");
         }
     };
 
