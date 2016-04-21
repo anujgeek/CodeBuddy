@@ -111,6 +111,14 @@ var app =
         {
             $.mobile.changePage("#page_create", { transition: "slidefade", changeHash: false });
         },
+        gotoLearn: function ()
+        {
+            $.mobile.changePage("#page_learn", { transition: "slidefade", changeHash: false });
+        },
+        gotoLearnContent: function ()
+        {
+            $.mobile.changePage("#page_learn_content", { transition: "slidefade", changeHash: false });
+        },
         gotoLoad: function ()
         {
             $.mobile.changePage("#page_load", { transition: "slidefade", changeHash: false });
